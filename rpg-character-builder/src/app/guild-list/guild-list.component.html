@@ -1,0 +1,22 @@
+<div class="guild-list">
+  <p class="empty-guilds" *ngIf="!guilds || guilds.length === 0">
+    No guilds yet.
+  </p>
+
+  <table *ngIf="guilds && guilds.length > 0" class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Notifications</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="guild-row" *ngFor="let g of guilds">
+        <td>{{ g.guildName }}</td>
+        <td>{{ g.type }}</td>
+        <td>{{ g.notificationPreference }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,22 @@
+<div class="character-list">
+  <p class="empty-characters" *ngIf="!characters || characters.length === 0">
+    No characters yet.
+  </p>
+
+  <table *ngIf="characters && characters.length > 0" class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Class</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="character-row" *ngFor="let c of characters">
+        <td>{{ c.name }}</td>
+        <td>{{ c.gender }}</td>
+        <td>{{ c.class }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
