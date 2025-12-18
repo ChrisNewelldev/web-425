@@ -1,0 +1,11 @@
+<h2>Character Factions</h2>
+
+<div *ngIf="errorMessage" class="error">
+  {{ errorMessage }}
+</div>
+
+<ul *ngIf="factions.length">
+  <li *ngFor="let faction of factions">
+    <strong>{{ faction.name }}</strong> — {{ faction.description }}
+  </li>
+</ul>
